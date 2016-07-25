@@ -46,6 +46,17 @@ gulp.task('copyImg', [], function(){
 		.pipe(gulp.dest('./dist/assets/img/'))
 })
 
+gulp.task('watch', ['build'], function(){
+	gulp.watch('./src/assets/css/*.css', ['copyCss']);
+	gulp.watch('./src/assets/js/*.js', ['distJS']);
+	gulp.watch('./src/assets/img/**', ['copyImg']);
+	gulp.watch('./src/scss/*.scss', ['copyCss']);
+	gulp.watch('./src/views/**/*.js', ['distJS']);
+	gulp.watch('./src/views/**/*.html', ['copyHtml']);
+	gulp.watch('./src/config.js', ['distJS']);
+	gulp.watch('./src/index.html', ['copyHtml']);
+})
+
 gulp.task('distJS', ['concatJS', 'copyConfig', 'copyJS']);
 
 gulp.task('build', ['distJS', 'copyHtml', 'copyCss', 'copyImg']);

@@ -10,6 +10,7 @@
     "gulp-sass": "^2.3.2"
 },
     "scripts":{
-        "build":"gulp clean & gulp build"
+        "build":"gulp clean & gulp build",
+        "start":"node start.js"
     }
 }
