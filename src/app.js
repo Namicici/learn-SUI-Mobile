@@ -59,6 +59,13 @@
 		$('#menu-list').append(html);
 
 		$('.item-title').on('click', function(){
+  			/*$(".ripple").remove();
+			$(this).prepend("<span class='ripple'></span>");
+			$(".ripple").css({
+			    width: '60px',
+			    height: '32px',
+				left:'45%'
+			}).addClass("rippleEffect");*/
 			var blockMenu = $(this).parent().children('.item-list');
 			if (blockMenu.css('display') == 'none'){
 				blockMenu.css('display', 'block');
