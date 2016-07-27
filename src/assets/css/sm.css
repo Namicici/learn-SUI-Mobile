@@ -344,8 +344,8 @@ a:active {
 }
 /* === Content Block === */
 .content-block {
-  margin: 1.75rem 0;
-  padding: 0 0.75rem;
+  /*margin: 1.75rem 0;
+  padding: 0 0.75rem;*/
   color: #6d6d72;
 }
 .content-block-title {

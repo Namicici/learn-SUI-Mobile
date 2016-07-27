@@ -1,9 +1,9 @@
 .item {
   background: black;
-  padding-left: 8px; }
+  border-bottom: solid 1px #282828; }
   .item .item-title {
     width: 100%;
-    padding: 4px 0;
+    padding: 4px 0 4px 8px;
     border-bottom: solid 1px #282828; }
   .item .item-list {
     padding-top: 4px; }
@@ -11,5 +11,4 @@
       font-size: 0.8rem;
       display: block;
       color: #828282;
-      padding: 4px 0;
-      padding-left: 8px; }
+      padding: 4px 0 4px 16px; }

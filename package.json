@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "body-parser": "^1.15.2",
     "del": "^2.2.1",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
@@ -7,9 +8,9 @@
   },
   "devDependencies": {
     "gulp-sass": "^2.3.2"
-},
-    "scripts":{
-        "build":"gulp clean & gulp build",
-        "start":"node start.js"
-    }
+  },
+  "scripts": {
+    "build": "gulp clean & gulp build",
+    "start": "node start.js"
+  }
 }

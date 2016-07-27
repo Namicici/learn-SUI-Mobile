@@ -15,7 +15,7 @@ gulp.task("copyHtml", [], function(){
 })
 
 gulp.task('concatJS', [], function(){
-	return gulp.src(['./src/app.js', './src/views/**/*.js'])
+	return gulp.src([ './src/views/service/*.js', './src/app.js','./src/views/**/*.js'])
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('./dist/'))
 })
