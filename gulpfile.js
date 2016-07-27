@@ -15,7 +15,7 @@ gulp.task("copyHtml", [], function(){
 })
 
 gulp.task('concatJS', [], function(){
-	return gulp.src(['./src/views/**/*.js'])
+	return gulp.src(['./src/app.js', './src/views/**/*.js'])
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('./dist/'))
 })
@@ -47,14 +47,14 @@ gulp.task('copyImg', [], function(){
 })
 
 gulp.task('watch', ['build'], function(){
+	gulp.watch(['./src/assets/js/*.js','./src/views/**/*.js','./src/config.js','./src/app.js'], ['distJS']);
+	//gulp.watch('./src/views/**/*.js', ['distJS']);
+	//gulp.watch('./src/config.js', ['distJS']);
 	gulp.watch('./src/assets/css/*.css', ['copyCss']);
-	gulp.watch('./src/assets/js/*.js', ['distJS']);
-	gulp.watch('./src/assets/img/**', ['copyImg']);
 	gulp.watch('./src/scss/*.scss', ['copyCss']);
-	gulp.watch('./src/views/**/*.js', ['distJS']);
 	gulp.watch('./src/views/**/*.html', ['copyHtml']);
-	gulp.watch('./src/config.js', ['distJS']);
 	gulp.watch('./src/index.html', ['copyHtml']);
+	gulp.watch('./src/assets/img/**', ['copyImg']);
 })
 
 gulp.task('distJS', ['concatJS', 'copyConfig', 'copyJS']);

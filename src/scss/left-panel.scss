@@ -1,0 +1,19 @@
+.item{
+	background: black;
+    padding-left: 8px;
+	.item-title{
+		width: 100%;
+	    padding: 4px 0;
+	    border-bottom: solid 1px #282828;
+	}
+	.item-list{
+		padding-top: 4px;
+		a{
+			font-size: 0.8rem;
+			display: block;
+			color: #828282;
+			padding: 4px 0;
+			padding-left: 8px;
+		}
+	}
+}
