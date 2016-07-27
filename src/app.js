@@ -49,7 +49,7 @@
 				+      '<div class="item-title">'
 				+      	   '<span class="icon icon-card" style="padding-right:8px;"></span>'
 				+          item.displayName
-                +          '<span class="icon icon-down" style="padding-right:8px;float:right;"></span>'
+                +          '<span class="icon icon-left" style="padding-right:8px;float:right;"></span>'
                 +      '</div>'
                 +      '<div class="item-list">'
 				+			childHtml
@@ -58,21 +58,21 @@
 		}
 		$('#menu-list').append(html);
 
+		$('.item-title').on('click', function(){
+			var blockMenu = $(this).parent().children('.item-list');
+			if (blockMenu.css('display') == 'none'){
+				blockMenu.css('display', 'block');
+				$(this).children('*:nth-child(2)').addClass('icon-down');
+				$(this).children('*:nth-child(2)').removeClass('icon-left');
+			}else {
+				blockMenu.css('display', 'none');
+				$(this).children('*:nth-child(2)').removeClass('icon-down');
+				$(this).children('*:nth-child(2)').addClass('icon-left');
+			}
+		})
+
 		/*** button list需要挂载到全局 ***/
         //$scope.$emit("iamp.buttonList", data.data.data.buttonList);
 	});
-
-	$('.item-title').on('click', function(){
-		var blockMenu = $(this).parent().children('.item-list');
-		if (blockMenu.css('display') == 'none'){
-			blockMenu.css('display', 'block');
-			$(this).children('*:nth-child(2)').addClass('icon-down');
-			$(this).children('*:nth-child(2)').removeClass('icon-left');
-		}else {
-			blockMenu.css('display', 'none');
-			$(this).children('*:nth-child(2)').removeClass('icon-down');
-			$(this).children('*:nth-child(2)').addClass('icon-left');
-		}
-	})
 
 }(Zepto))

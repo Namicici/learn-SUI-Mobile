@@ -6,7 +6,8 @@
     padding: 4px 0 4px 8px;
     border-bottom: solid 1px #282828; }
   .item .item-list {
-    padding-top: 4px; }
+    padding-top: 4px;
+    display: none; }
     .item .item-list a {
       font-size: 0.8rem;
       display: block;
