@@ -1,3 +1,7 @@
+.content-block{
+  height: calc(100% + 1px); /* 动态增加内容的时候在iphone 5c上出现无法滚动的问题 http://patrickmuff.ch/blog/2014/10/01/how-we-fixed-the-webkit-overflow-scrolling-touch-bug-on-ios/ */
+}
+
 .item{
 	background: black;
 	border-bottom: solid 1px #282828;
