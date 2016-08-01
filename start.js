@@ -20,7 +20,6 @@ app.use(function(req, res, next){
     next();
 });
 
-
 app.listen(port, function(){
 	console.log('start at port ' + port);
 });

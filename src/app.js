@@ -1,3 +1,4 @@
+
 ;(function($){
 	"use strict";
 
@@ -42,7 +43,7 @@
 			for (var j = 0; j < item.children.length; j++){
 				var child = item.children[j];
 				childHtml = childHtml
-	                +'<a href="/toDo/member/" class="icon icon-me"> ' + child.displayName + '</a>';
+	                +'<a href="/views/toDo/member/" class="icon icon-me"> ' + child.displayName + '</a>';
 			}
 			html = html
 				+ '<div class="item">'
@@ -77,7 +78,6 @@
 				$(this).children('*:nth-child(2)').addClass('icon-left');
 			}
 		})
-
 		/*** button list需要挂载到全局 ***/
         //$scope.$emit("iamp.buttonList", data.data.data.buttonList);
 	});
