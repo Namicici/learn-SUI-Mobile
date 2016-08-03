@@ -43,7 +43,7 @@
 			for (var j = 0; j < item.children.length; j++){
 				var child = item.children[j];
 				childHtml = childHtml
-	                +'<a href="/views/toDo/member/" class="icon icon-me"> ' + child.displayName + '</a>';
+	                +'<a href=' + urlMapping[child.url] + ' class="icon icon-me"> ' + child.displayName + '</a>';
 			}
 			html = html
 				+ '<div class="item">'

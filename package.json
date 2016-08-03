@@ -5,8 +5,7 @@
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
-    "merge-stream": "^1.0.0",
-    "seajs": "^3.0.2"
+    "merge-stream": "^1.0.0"
   },
   "devDependencies": {
     "gulp-sass": "^2.3.2"
