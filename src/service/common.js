@@ -6,7 +6,7 @@
 	$.fn.http = function (options, successCallBack, errorCallBack){
 		$.ajax({
 			type: options.method,
-			url: options.url,
+			url: baseUrl + options.url,
 			data: options.data,
 			header: options.header,
 			processData: false,

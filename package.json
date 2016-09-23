@@ -13,6 +13,6 @@
   "scripts": {
     "build": "gulp clean & gulp build",
     "watch": "gulp watch",
-    "start": "supervisor -w start.js,./server/*.js --debug start.js"
+    "start": "supervisor -w start.js, ./server/*.js --debug start.js"
   }
 }

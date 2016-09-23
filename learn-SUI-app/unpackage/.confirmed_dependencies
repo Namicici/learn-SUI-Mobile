@@ -1,0 +1,18 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "assets/css/sm.min.css",
+      "assets/css/sm-extend.min.css",
+      "assets/css/app.css",
+      "assets/js/zepto.min.js",
+      "config.js",
+      "assets/js/sm.min.js",
+      "assets/js/sm-extend.min.js",
+      "assets/js/sm-city-picker.min.js",
+      "app.js"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}

@@ -31,8 +31,12 @@ gulp.task('compileScss', [], function(){
 })
 
 gulp.task('copyCss', ['compileScss'], function(){
-	return gulp.src('./src/assets/css/*.css')
-		.pipe(gulp.dest('./dist/assets/css/'))
+	return mergeStream(
+		gulp.src('./src/assets/css/*.css')
+			.pipe(gulp.dest('./dist/assets/css/')),
+		gulp.src('./src/assets/fonts/*')
+			.pipe(gulp.dest('./dist/assets/fonts/'))
+	)
 })
 
 gulp.task("copyHtml", [], function(){
