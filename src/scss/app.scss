@@ -1,4 +1,41 @@
 @import "./left-panel";
 body{
 
+	.agency-card{
+		display: flex;
+		.card{
+		  flex-basis: 100%;
+		  justify-content: space-between;
+		}
+		.agency-card-inner{
+			padding:0;
+			.inner-title{
+				font-size: 1rem;
+			    text-align: center;
+			    border-bottom: solid 1px #ccc;
+			}
+			.inner-content{
+				font-size: 1rem;
+			    color: red;
+			    text-align: center;
+			    vertical-align: middle;
+			    height: 64px;
+			    padding-top: 16px;
+			}
+		}
+	}
+
+	.notice-header{
+		display: block;
+    	height: 1.5rem;
+		.notice-title{
+			float:left;
+			color:#ccc;
+		}
+		.notice-time{
+			float:right;
+			color:#ccc;
+		}
+	}
+
 }

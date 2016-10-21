@@ -46,3 +46,32 @@
     -webkit-transform: scale(2);
     transform: scale(2);
     opacity: 0; } }
+
+body .agency-card {
+  display: flex; }
+  body .agency-card .card {
+    flex-basis: 100%;
+    justify-content: space-between; }
+  body .agency-card .agency-card-inner {
+    padding: 0; }
+    body .agency-card .agency-card-inner .inner-title {
+      font-size: 1rem;
+      text-align: center;
+      border-bottom: solid 1px #ccc; }
+    body .agency-card .agency-card-inner .inner-content {
+      font-size: 1rem;
+      color: red;
+      text-align: center;
+      vertical-align: middle;
+      height: 64px;
+      padding-top: 16px; }
+
+body .notice-header {
+  display: block;
+  height: 1.5rem; }
+  body .notice-header .notice-title {
+    float: left;
+    color: #ccc; }
+  body .notice-header .notice-time {
+    float: right;
+    color: #ccc; }

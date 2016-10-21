@@ -19,54 +19,66 @@
     <link rel="stylesheet" href="assets/css/app.css">
 
     <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-114x114.png">
-    <!--script src="/assets/js/sea.js"></script-->
     <script src="assets/js/zepto.min.js"></script>
     <script src="config.js"></script>
-    <script>
-      //ga
-    </script>
-    <!--script>
-var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?ba76f8230db5f616edc89ce066670710";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-})();
-</script-->
-
   </head>
   <body>
     <div class="page-group">
-        <div class="page page-current" id='routers-step-1'>
-            <header class="bar bar-nav">
-                <a class="icon icon-menu pull-left open-panel" data-panel=".panel-left"></a>
-                <a href="/views/me/" class="button button-link button-nav pull-right">
-                    <span class="icon icon-me"></span>
-                </a>
-                <h1 class="title">Home Page</h1>
-            </header>
-            <div class="content">
-                <div class="content-block">
-                    <p><a href="/demos/routers/step3/">路由 Demo 页面 C</a></p>
-                    <p><a href="#routers-step-2-inner">路由 Demo 页面 B 内联 page</a></p>
-                    <p><a href="/demos/routers/">路由 Demo 页面 A（不带 .back, 只是普通跳转）</a></p>
-                    <p><a href="http://www.aliued.com/" external>跨域的外链:www.aliued.com</a></p>
-
-                    <p><a href="javascript:;" class="open-panel" data-panel='#panel-left-demo'>打开左侧栏</a></p>
-
-                    <p><a href="javascript:;" class="open-popup" data-popup=".popup-about">打开 about 弹层</a></p>
-                    <p><a href="javascript:;" class="open-popup" data-popup=".popup-services">打开 service 弹层</a></p>
+        <div class="page page-current"  id="page-home">
+            <div class="content infinite-scroll infinite-scroll-bottom" data-distance="100" style="bottom:2rem;">
+                <div class="content-block-title">我的代办</div>
+                <div class="agency-card">
+                    <div class="card">
+                        <div class="card-content">
+                          <div class="card-content-inner agency-card-inner">
+                              <div class="inner-title">会员</div>
+                              <div class="inner-content">10</div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                          <div class="card-content-inner agency-card-inner">
+                              <div class="inner-title">产品</div>
+                              <div class="inner-content">10</div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                          <div class="card-content-inner agency-card-inner">
+                              <div class="inner-title">内容</div>
+                              <div class="inner-content">10</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-block-title">最新通知</div>
+                <div class="notice-container">
+                </div>
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                   <div class="preloader"></div>
                 </div>
             </div>
-        </div>
-
-        <!-- Left Panel with Reveal effect -->
-        <div class="panel panel-left panel-reveal theme-dark" id='panel-left'>
-            <div class="content-block" id="menu-list">
-                <!--p><a href="#routers-step-2-inner">路由 Demo 页面 B 内联 page</a></p-->
-                <!--p><a href="javascript:;" class="close-panel">关闭</a></p-->
-            </div>
+            <nav class="bar bar-tab">
+                <a class="tab-item external active" href="#">
+                    <span class="icon icon-home"></span>
+                    <span class="tab-label">工作台</span>
+                </a>
+                <a class="tab-item external" href="#">
+                    <span class="icon icon-star"></span>
+                    <span class="tab-label">产品管理</span>
+                </a>
+                <a class="tab-item external" href="#">
+                    <span class="icon icon-cart"></span>
+                    <span class="tab-label">交易管理</span>
+                </a>
+                <a class="tab-item external" href="#">
+                    <span class="icon icon-app"></span>
+                    <span class="tab-label">其他</span>
+                </a>
+            </nav>
         </div>
     </div>
     <script src="assets/js/sm.min.js"></script>

@@ -10,7 +10,7 @@ function getMenus(req, res, next){
                     "id":"1",
                     "parentId":"0",
                     "name":"待办任务",
-                    "icon": "fa-clipboard fa-fw",
+                    "icon": "icon icon-home",
                     "url":""
                 },
                 {
@@ -30,43 +30,15 @@ function getMenus(req, res, next){
                 {
                     "id":"4",
                     "parentId":"1",
-                    "name":"综合查询",
+                    "name":"内容待办",
                     "icon": "fa-lightbulb-o fa-fw",
-                    "url":"searchAgency.html"
-                },
-                {
-                    "id":"5",
-                    "parentId":"0",
-                    "name":"组织机构",
-                    "icon": "fa-clipboard fa-fw",
-                    "url":""
-                },
-                {
-                    "id":"6",
-                    "parentId":"5",
-                    "name":"组织机构",
-                    "icon": "fa-lightbulb-o fa-w",
-                    "url":"orgStructure.html"
-                },
-                {
-                    "id":"7",
-                    "parentId":"0",
-                    "name":"权限组管理",
-                    "icon": "fa-clipboard fa-fw",
-                    "url":""
-                },
-                {
-                    "id":"8",
-                    "parentId":"7",
-                    "name":"权限组管理",
-                    "icon": "fa-lightbulb-o fa-w",
-                    "url":"permitMgr.html"
+                    "url":"bulletinAgency.html"
                 },
                 {
                     "id":"9",
                     "parentId":"0",
                     "name":"产品管理",
-                    "icon": "fa-briefcase",
+                    "icon": "icon icon-star",
                     "url":""
                 },
                 {
@@ -94,7 +66,7 @@ function getMenus(req, res, next){
                     "id":"13",
                     "parentId":"0",
                     "name":"交易管理",
-                    "icon": "fa-legal",
+                    "icon": "icon icon-cart",
                     "url":""
                 },
                 {
@@ -155,66 +127,10 @@ function getMenus(req, res, next){
                 },
                 {
                     "id":"22",
-                    "parentId":"0",
-                    "name":"统计分析",
-                    "icon": "fa-cloud",
-                    "url":""
-                },
-                {
-                    "id":"23",
-                    "parentId":"22",
-                    "name":"产品募集情况报表",
+                    "parentId":"19",
+                    "name":"banner管理",
                     "icon": "fa-comment",
-                    "url":"raiseStatementReport.html"
-                },
-                {
-                    "id":"24",
-                    "parentId":"0",
-                    "name":"流动性互助",
-                    "icon": "fa-cloud",
-                    "url":""
-                },
-    			{
-                    "id":"26",
-                    "parentId":"24",
-                    "name":"线上资金业务",
-                    "icon": "fa-comment",
-                    "url":"repoInterbank.html"
-                },
-                {
-                    "id":"25",
-                    "parentId":"24",
-                    "name":"同业存款业务",
-                    "icon": "fa-comment",
-                    "url":"tradeAgreementDeposit.html"
-                },
-                {
-                    "id":"27",
-                    "parentId":"24",
-                    "name":"商业汇票交易",
-                    "icon": "fa-comment",
-                    "url":"commercialBills.html"
-                },
-                {
-                    "id":"28",
-                    "parentId":"24",
-                    "name":"同业存单",
-                    "icon": "fa-comment",
-                    "url":"tradeDeposit.html"
-                },
-                {
-                    "id":"29",
-                    "parentId":"24",
-                    "name":"短期融资券",
-                    "icon": "fa-comment",
-                    "url":"shortTermFinancing.html"
-                },
-                {
-                    "id":"30",
-                    "parentId":"24",
-                    "name":"收益凭证",
-                    "icon": "fa-comment",
-                    "url":"returnVoucher.html"
+                    "url":"bannerMgr.html"
                 },
                 {
                     "id":"31",
@@ -244,54 +160,6 @@ function getMenus(req, res, next){
                     "icon": "fa-comment",
                     "url":"requirementForTrustPlan.html"
                 },
-                {
-                    "id":"35",
-                    "parentId":"0",
-                    "name":"系统管理",
-                    "icon": "fa-cogs",
-                    "url":""
-                },
-                {
-                    "id":"36",
-                    "parentId":"35",
-                    "name":"日志查询",
-                    "icon": "fa-calendar",
-                    "url":"checklog.html"
-                },
-    			{
-                    "id":"37",
-                    "parentId":"35",
-                    "name":"流程管理",
-                    "icon": "fa-calendar",
-                    "url":"processMgr.html"
-                },
-    			{
-                    "id":"38",
-                    "parentId":"0",
-                    "name":"模板管理",
-                    "icon": "fa-cogs",
-                    "url":""
-                },
-    			{
-                    "id":"39",
-                    "parentId":"38",
-                    "name":"模板管理",
-                    "icon": "fa-calendar",
-                    "url":"templateMgr.html"
-    			},{
-    				"id":"49",
-                    "parentId":"22",
-                    "name":"客户经理业绩分析",
-                    "icon": "fa-calendar",
-                    "url":"managerPerformanceAnalysis.html"
-                },
-    			{
-                    "id":"50",
-                    "parentId":"22",
-                    "name":"会员收费明细统计",
-                    "icon": "fa-calendar",
-                    "url":"memberChargeDetailStatistic.html"
-                }
             ],
             "buttonList":[
     			{

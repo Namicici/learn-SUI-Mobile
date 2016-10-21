@@ -2,7 +2,6 @@
 	"use strict";
 
 	window.baseUrl = '/api';
-
 	$.fn.http = function (options, successCallBack, errorCallBack){
 		$.ajax({
 			type: options.method,
