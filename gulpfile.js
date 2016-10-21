@@ -18,14 +18,13 @@ gulp.task('compileJS', [], function(){
 	return mergeStream(
 		gulp.src([ './src/service/*.js', './src/config.js'])
 			.pipe(concat('app.js'))
-        	.pipe(renameMd5())
-			.pipe(gulp.dest('./dist/')),
-		gulp.src(['./src/assets/js/sm.js', './src/assets/js/zepto.js', './src/assets/js/sm-extend.js'])
-			.pipe(concat('thirdParty.js'))
-        	.pipe(renameMd5())
+			.pipe(gulp.dest('./dist/views/')),
+		gulp.src(['./src/assets/js/sm.js', './src/assets/js/sm-extend.js'])
+			.pipe(concat('sm.js'))
+			.pipe(gulp.dest('./dist/assets/js/')),
+		gulp.src('./src/assets/js/zepto.js')
 			.pipe(gulp.dest('./dist/assets/js/')),
 		gulp.src('./src/views/**/*.js')
-			.pipe(renameMd5())
 			.pipe(gulp.dest('./dist/views/'))
 	)
 })
@@ -39,7 +38,6 @@ gulp.task('compileScss', [], function(){
 gulp.task('copyCss', ['compileScss'], function(){
 	return mergeStream(
 		gulp.src(['./src/assets/css/app.css', './src/assets/css/sm.css'])
-			.pipe(renameMd5())
 			.pipe(gulp.dest('./dist/assets/css/')),
 		gulp.src('./src/assets/fonts/*')
 			.pipe(gulp.dest('./dist/assets/fonts/'))
@@ -69,7 +67,25 @@ gulp.task('watch', ['build'], function(){
 	gulp.watch('./src/assets/img/**', ['copyImg']);
 })
 
-gulp.task('build', ['compileJS', 'copyHtml', 'copyCss', 'copyImg']);
+gulp.task('replaceMd5', ['compileJS', 'copyHtml', 'copyCss', 'copyImg'], function(){
+	return mergeStream(
+		gulp.src("./dist/views/**/*.html")
+            .pipe(replaceMd5({ base: __dirname + '/dist/' ,openTag : '{{{', closeTag : '}}}' }))
+            .pipe(gulp.dest("./dist/views/")),
+		gulp.src("./dist/views/*.js")
+			.pipe(renameMd5())
+			.pipe(gulp.dest('./dist/views/')),
+		gulp.src('./dist/views/**/*.js')
+			.pipe(renameMd5())
+			.pipe(gulp.dest('./dist/views/')),
+		gulp.src('./dist/assets/css/app.css')
+			.pipe(renameMd5())
+			.pipe(gulp.dest('./dist/assets/css'))
+	)
+})
+
+gulp.task('build', ['replaceMd5']);
+
 
 gulp.task('minify', ['build'], function(){
 	return mergeStream(

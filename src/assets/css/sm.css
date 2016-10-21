@@ -4295,7 +4295,7 @@ body.panel-closing .page {
 }
 @font-face {
   font-family: "iconfont-sm";
-  src: url('assets/fonts/font_1433401008_2229297.woff') format('woff'), /* chrome、firefox */ url('assets/fonts/font_1433401008_2229297.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('assets/fonts/font_1433401008_2229297.svg') format('svg');
+  src: url('/assets/fonts/font_1433401008_2229297.woff') format('woff'), /* chrome、firefox */ url('/assets/fonts/font_1433401008_2229297.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('/assets/fonts/font_1433401008_2229297.svg') format('svg');
   /* iOS 4.1- */
 }
 .icon {
