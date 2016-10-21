@@ -81,8 +81,6 @@
 						$(this).children('*:nth-child(2)').addClass('icon-left');
 					}
 				})
-				/*** button list需要挂载到全局 ***/
-		        //$scope.$emit("iamp.buttonList", data.data.data.buttonList);
 			});
 		}
 

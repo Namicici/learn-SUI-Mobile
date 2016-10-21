@@ -4,7 +4,11 @@
     "del": "^2.2.1",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
+    "gulp-rename-md5": "0.0.1",
+    "gulp-replace-md5": "0.0.11",
+    "gulp-uglify": "^2.0.0",
     "merge-stream": "^1.0.0"
   },
   "devDependencies": {
