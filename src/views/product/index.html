@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Learn SUI Mobile</title>
+    <meta name="description" content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="author" content="Learning SUI Mobile">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Google Web Fonts -->
+
+    <link rel="stylesheet" href="/assets/css/sm.min.css">
+    <link rel="stylesheet" href="/assets/css/sm-extend.min.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <link rel="apple-touch-icon-precomposed" href="/assets/img/apple-touch-icon-114x114.png">
+    <!--script src="/assets/js/sea.js"></script-->
+    <script src="/assets/js/zepto.min.js"></script>
+    <script src="/config.js"></script>
+  </head>
+  <body>
+    <div class="page-group">
+	    <div class="page page-current" id="page-product">
+		    <div class="content">
+              <div class="buttons-tab">
+                <a href="#bankProduct" class="tab-link active button">理财产品</a>
+                <a href="#assetPlan" class="tab-link button">资管计划</a>
+                <a href="#trustPlan" class="tab-link button">信托计划</a>
+              </div>
+              <div class="content-block">
+                <div class="tabs">
+                    <div id="bankProduct" class="tab active">
+                        <div class="content-block">
+                        </div>
+                    </div>
+                    <div id="assetPlan" class="tab">
+                        <div class="content-block">
+                        </div>
+                    </div>
+                    <div id="trustPlan" class="tab">
+                        <div class="content-block">
+                        </div>
+                    </div>
+                </div>
+              </div>
+		    </div>
+            <nav class="bar bar-tab">
+                <a class="tab-item external" href="/views/home/index.html">
+                    <span class="icon icon-home"></span>
+                    <span class="tab-label">工作台</span>
+                </a>
+                <a class="tab-item external active" href="/views/product/index.html">
+                    <span class="icon icon-star"></span>
+                    <span class="tab-label">产品管理</span>
+                </a>
+                <a class="tab-item external" href="#">
+                    <span class="icon icon-cart"></span>
+                    <span class="tab-label">交易管理</span>
+                </a>
+                <a class="tab-item external" href="#">
+                    <span class="icon icon-app"></span>
+                    <span class="tab-label">其他</span>
+                </a>
+            </nav>
+		</div>
+    </div>
+    <script src="/assets/js/sm.min.js"></script>
+    <script src="/assets/js/sm-extend.min.js"></script>
+    <script src="/assets/js/sm-city-picker.min.js"></script>
+    <script src="/app.js"></script>
+    <script src="/views/product/productMgr.js"></script>
+  </body>
+</html>

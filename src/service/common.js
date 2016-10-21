@@ -19,4 +19,18 @@
 		})
 	};
 
+	var menus = {};
+	$.fn.saveMenus = function(data){
+		menus = data;
+	}
+	
+	$.fn.getChildMenu = function(parentId){
+		for (var i=0; i<menus.length; i++){
+			if (menus[i].id == parentId){
+				return menus[i].children;
+			}
+		}
+		return [];
+	}
+
 }(Zepto));

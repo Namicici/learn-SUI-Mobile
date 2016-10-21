@@ -6,10 +6,10 @@ var app = express();
 
 var router = require("./server/router")
 
-app.use("/", express.static(__dirname + '/dist'));
+app.use("/", express.static(__dirname + '/dist/'));
 
 app.get("/", function(req, res){
-    res.redirect("/");
+    res.redirect("/views/home/");
 });
 
 app.use(bodyParser.json());

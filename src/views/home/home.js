@@ -38,6 +38,7 @@
 				url: "/menus"
 			}, function(data){
 				var menuItems = resolveMenuList(data.data.menuList);
+				$.fn.saveMenus(menuItems);
 				var html = "";
 				for (var i = 0; i < menuItems.length; i++){
 					var item = menuItems[i];
@@ -84,6 +85,8 @@
 		        //$scope.$emit("iamp.buttonList", data.data.data.buttonList);
 			});
 		}
+
+		getMenus();
 		function getNotices(pageCount){
 			$.fn.http({
 				method:'get',
