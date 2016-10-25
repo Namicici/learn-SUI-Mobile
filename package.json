@@ -7,9 +7,13 @@
     "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-rename-md5": "0.0.1",
+    "gulp-replace": "^0.5.4",
     "gulp-replace-md5": "0.0.11",
+    "gulp-sftp": "^0.1.5",
     "gulp-uglify": "^2.0.0",
-    "merge-stream": "^1.0.0"
+    "gulp-zip": "^3.2.0",
+    "merge-stream": "^1.0.0",
+    "ssh2": "^0.5.2"
   },
   "devDependencies": {
     "gulp-sass": "^2.3.2"
