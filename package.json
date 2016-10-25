@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "gulp clean & gulp build",
-    "watch": "gulp watch",
+    "watch": "gulp clean & gulp watch",
     "start": "supervisor -w start.js, ./server/*.js --debug start.js"
   }
 }

@@ -84,16 +84,42 @@
 			});
 		}
 
-		getMenus();
+		//getMenus();
 		function getNotices(pageCount){
-			$.fn.http({
+		/*	$.fn.http({
 				method:'get',
-				url:'/notices',
+				url:'/home/message',
 				page:{
 					count: pageCount
 				}
-			}, function(data){
-				var notices = data.data;
+			}, function(data){*/
+				//var notices = data.data;
+				var notices =[{
+		            "id":1,
+		            "title":"产品发布",
+		            "createTime":"2016-10-21 10:54:01",
+		            "content":"【金助力】你好，中诚信托发行人客户在平台发布的信托7号产品需您审核，请及时处理。中诚信托发行人客户在平台发布的信托7号产品需您审核，请及时处理。"
+		        },{
+		            "id":2,
+		            "title":"会员注册",
+		            "createTime":"2016-10-21 11:15:00",
+		            "content":"【金助力】你好，中诚信托发行人客户在平台发布的信托7号产品需您审核，请及时处理。"
+		        },{
+		            "id":3,
+		            "title":"会员注册",
+		            "createTime":"2016-10-21 11:15:00",
+		            "content":"【金助力】你好，中诚信托发行人客户在平台发布的信托7号产品需您审核，请及时处理。"
+		        },{
+		            "id":4,
+		            "title":"会员注册",
+		            "createTime":"2016-10-21 11:15:00",
+		            "content":"【金助力】你好，中诚信托发行人客户在平台发布的信托7号产品需您审核，请及时处理。"
+		        },{
+		            "id":5,
+		            "title":"会员注册",
+		            "createTime":"2016-10-21 11:15:00",
+		            "content":"【金助力】你好，中诚信托发行人客户在平台发布的信托7号产品需您审核，请及时处理。"
+		        }];
 				var html = "";
 				for (var i=0; i<notices.length; i++){
 					html = html + '<div class="card">'
@@ -101,7 +127,7 @@
 						+ '  <div class="card-content-inner">'
 						+ '	  <div class="notice-header">'
 						+ '		  <div class="notice-title">'+ notices[i].title + '</div>'
-						+ '		  <div class="notice-time">'+  notices[i].time + '</div>'
+						+ '		  <div class="notice-time">'+  notices[i].createTime + '</div>'
 						+ '	  </div>'
 						+ '	  <div class="notice-content">'+ notices[i].content + '</div>'
 						+ ' </div>'
@@ -109,7 +135,7 @@
 					+ '</div>'
 				}
 				$('.infinite-scroll-bottom .notice-container').append(html);
-			})
+			//})
 		}
 		var loading = false;
 		var maxItems = 100;

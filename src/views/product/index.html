@@ -17,33 +17,38 @@
     <link rel="stylesheet" href="/assets/css/sm.css">
     <link rel="stylesheet" href="{{{/assets/css/app.css}}}">
     <!--script src="/assets/js/sea.js"></script-->
-    <script src="/assets/js/zepto.min.js"></script>
+    <script src="/assets/js/zepto.js"></script>
   </head>
   <body>
     <div class="page-group">
 	    <div class="page page-current" id="page-product">
-		    <div class="content">
-              <div class="buttons-tab">
-                <a href="#bankProduct" class="tab-link active button">理财产品</a>
-                <a href="#assetPlan" class="tab-link button">资管计划</a>
-                <a href="#trustPlan" class="tab-link button">信托计划</a>
-              </div>
-              <div class="content-block">
-                <div class="tabs">
-                    <div id="bankProduct" class="tab active">
-                        <div class="content-block">
+		    <div class="content infinite-scroll infinite-scroll-bottom" data-distance="100" style="bottom:2rem;">
+                <div class="buttons-tab">
+                    <a href="#bankProduct" class="tab-link active button">理财产品</a>
+                    <a href="#assetPlan" class="tab-link button">资管计划</a>
+                    <a href="#trustPlan" class="tab-link button">信托计划</a>
+                </div>
+                <div class="content-block">
+                    <div class="tabs">
+                        <div id="bankProduct" class="tab active">
+                            <div class="content-block">
+                            </div>
                         </div>
-                    </div>
-                    <div id="assetPlan" class="tab">
-                        <div class="content-block">
+                        <div id="assetPlan" class="tab">
+                            <div class="content-block">
+                            </div>
                         </div>
-                    </div>
-                    <div id="trustPlan" class="tab">
-                        <div class="content-block">
+                        <div id="trustPlan" class="tab">
+                            <div class="content-block">
+                            </div>
                         </div>
                     </div>
                 </div>
-              </div>
+
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
 		    </div>
             <nav class="bar bar-tab">
                 <a class="tab-item external" href="/views/home/index.html">

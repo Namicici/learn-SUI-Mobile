@@ -59,11 +59,11 @@ gulp.task('copyImg', [], function(){
 })
 
 gulp.task('watch', ['build'], function(){
-	gulp.watch(['./src/assets/js/*.js','./src/views/**/*.js','./src/config.js','./src/app.js'], ['compileJS']);
+	gulp.watch(['./src/assets/js/*.js','./src/views/**/*.js','./src/config.js','./src/app.js'], ['replaceMd5']);
 	gulp.watch('./src/assets/css/*.css', ['copyCss']);
-	gulp.watch('./src/scss/*.scss', ['copyCss']);
-	gulp.watch('./src/views/**/*.html', ['copyHtml']);
-	gulp.watch('./src/index.html', ['copyHtml']);
+	gulp.watch('./src/scss/*.scss', ['replaceMd5']);
+	gulp.watch('./src/views/**/*.html', ['replaceMd5']);
+	gulp.watch('./src/index.html', ['replaceMd5']);
 	gulp.watch('./src/assets/img/**', ['copyImg']);
 })
 
@@ -85,7 +85,6 @@ gulp.task('replaceMd5', ['compileJS', 'copyHtml', 'copyCss', 'copyImg'], functio
 })
 
 gulp.task('build', ['replaceMd5']);
-
 
 gulp.task('minify', ['build'], function(){
 	return mergeStream(

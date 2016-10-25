@@ -7,23 +7,9 @@ function route(app){
     app.get("/api/menus", function(req, res, next){
         menus.getMenus(req, res, next)
     });
-    app.get('/api/notices', function(req, res, next){
+    app.get('/api/home/message', function(req, res, next){
         notices.getNotices(req, res, next);
     })
-
-    /*
-    app.post("/login.do", function(req, res, next){
-        verify.verifyLogin(req, res, next);
-    });
-
-    app.put("/register.do", function(req, res, next){
-        verify.verifyRegister(req, res, next);
-    });
-
-    app.get("/dashboard.me", function(req, res, next){
-        user.getUserInfo(req, res, next)
-    });
-    */
 };
 
 exports.route = route
